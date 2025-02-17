@@ -3,37 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="loginstyle.css">
-    <link rel="stylesheet" href="bootstrap.min.css">
+    <title>Placement Portal Login</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <title>Placement Portal Login Page</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="loginstyle.css">
 </head>
 <body>
-    <div class="container d-flex flex-column align-items-center justify-content-center" style="height: 100vh;">
-        <h2>StepAhead</h2>
-        <h3>Log in to your Account</h3>
-        <p>Welcome back select method to log in:</p>
-        <button type="button" class="btn btn-outline-secondary">
-            <i class="fab fa-google me-2"></i>Log in with Google</button>
-        <br>
-        <p>or Log in with Email</p>
-        <br>
-        
-        <div class="mb-3">
-            <label for="formGroupExampleInput" class="form-label">Email</label>
-            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Email Address">
-          </div>
-          <div class="mb-3">
-            <label for="formGroupExampleInput2" class="form-label">Passoword</label>
-            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Password">
-          </div>
-          <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-          </div>
-        <button type="submit" class="btn btn-primary btn-submit">Submit</button>
+    <div class="container">
+        <h1>Welcome to Login Page of StepAhead</h1>
+        <form>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
     </div>
-    </div>
-    <script src="bootstrap.bundle.min.js"></script>
 </body>
 </html>
