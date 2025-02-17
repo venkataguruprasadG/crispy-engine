@@ -12,7 +12,8 @@
 .fa-tachometer-alt,
 .fa-user-tie,
 .fa-graduation-cap,
-.fa-calendar-alt {
+.fa-calendar-alt,
+.fa-sign-in-alt {
     font-size: 24px;
     color: var(--text-color);
     margin-right: 8px;
