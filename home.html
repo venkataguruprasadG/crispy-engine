@@ -6,75 +6,122 @@
     <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
     <title>PLACEMENT PORTAL</title>
     <style>
-      .sidebar {
-          height: 100vh;
-          width: 250px;
-          position: fixed;
-          top: 0;
-          left: 0;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          background-color: antiquewhite;
-          padding-top: 20px;
-      }
-      .sidebar .nav-link {
-          margin: 10px 0;
-          font-weight: normal;
-          font-size: 20px;
-      }
-      .sidebar .navbar-brand{
-    padding-left: 70px;
-    margin-bottom: 20px;
-    align-self: flex-start;
-    font-weight: normal;
-    font-size: 20px;
+        .sidebar {
+            height: 100vh;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            background-color: var(--secondary-color);
+            padding: 20px;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+        }
+    
+    
+    .sidebar .nav-link:hover,
+    .sidebar .nav-link:hover i {
+        background-color: black !important;
+        color: white !important;
     }
-  </style>
+
+        .sidebar .nav-link {
+            margin: 15px 0;
+            font-size: 18px;
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .sidebar .nav-link:hover {
+            background-color: rgba(91, 91, 243, 0.1);
+            color: var(--primary-color);
+        }
+        
+        .sidebar .navbar-brand {
+            margin: 20px 0;
+            font-size: 24px;
+            color: var(--primary-color);
+            text-decoration: none;
+            align-self: center;
+        }
+        
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+        
+        hr {
+            width: 80%;
+            margin: 20px auto;
+            border-color: rgba(0,0,0,0.1);
+        }
+    </style>
 </head>
 <body>
-  <nav class="sidebar">
-    <i class="fab fa-github"></i>
-    <a class="navbar-brand" href="./home.html" style="color: rgb(91, 91, 243);">
-      StepAhead
-    </a>
-    <ul class="nav flex-column">
-        <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">
-                <!-- Home icon --><i class="fa fa-home"></i>Home</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="./dashboard.html">
-                <i class="fa fa-tachometer-alt"></i>Dashboard</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="./inbox.html">
-                <i class="fa-solid fa-envelope"></i>Inbox</a>
-        </li>
-        <hr />
-        <li class="nav-item">
-            <a class="nav-link" href="./MockInterview.html">
-                <i class="fa fa-user-tie"></i>Mock Interview</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="./course.html">
-                <i class="fa fa-graduation-cap"></i>Course</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="./Drives.html">
-                <i class="fa fa-calendar-alt"></i>Drives</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="./settings.html">
-                <!--Settings icon--><i class="fa fa-cog"></i>Settings</a>
-        </li>
-    </ul>
-</nav>
+    <nav class="sidebar">
+        <i class="fab fa-github"></i>
+        <a class="navbar-brand" href="./home.html">
+            StepAhead
+        </a>
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">
+                    <i class="fa fa-home"></i>Home
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./dashboard.html">
+                    <i class="fa fa-tachometer-alt"></i>Dashboard
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./inbox.html">
+                    <i class="fa-solid fa-envelope"></i>Inbox
+                </a>
+            </li>
+            <hr />
+            <li class="nav-item">
+                <a class="nav-link" href="./MockInterview.html">
+                    <i class="fa fa-user-tie"></i>Mock Interview
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./course.html">
+                    <i class="fa fa-graduation-cap"></i>Course
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./Drives.html">
+                    <i class="fa fa-calendar-alt"></i>Drives
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./settings.html">
+                    <i class="fa fa-cog"></i>Settings
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./login.html">
+                    <i class="fa fa-cog"></i>Login
+                </a>
+            </li>
+        </ul>
+    </nav>
 
-      <script src="bootstrap.bundle.min.js"></script>
+    <div class="main-content">
+        <!-- Main content goes here -->
+    </div>
+
+    <script src="bootstrap.bundle.min.js"></script>
 </body>
 </html>

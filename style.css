@@ -1,41 +1,50 @@
-.fa-home {
-    font-size: 24px;
-    color: #040505;
+/* Base Styles */
+:root {
+    --primary-color: rgb(91, 91, 243);
+    --secondary-color: antiquewhite;
+    --text-color: #040505;
 }
 
-.fa-cog {
+/* Icon Styles */
+.fa-home,
+.fa-cog,
+.fa-envelope,
+.fa-tachometer-alt,
+.fa-user-tie,
+.fa-graduation-cap,
+.fa-calendar-alt {
     font-size: 24px;
-    color: #000000;
+    color: var(--text-color);
+    margin-right: 8px;
 }
 
-.fa-envelope{
-    font-size: 24px;
-    color: #060707;
-}
-
-.fa-tachometer-alt{
-    font-size: 24px;
-    color: #060707;
-}
-
-.fa-user-tie{
-    font-size: 24px;
-    color: #040505;
-}
-
-.fa-graduation-cap{
-    font-size: 24px;
-    color: #060707;
-}
-
-.fa-calendar-alt{
-    font-size: 24px;
-    color: #060707;
-}
-
-.fa-github{
+.fa-github {
     font-size: 30px;
-    color: #040505;
-    align-items: center;
+    color: var(--text-color);
     padding-right: 50px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 20px;
+    }
+    
+    .sidebar .navbar-brand {
+        padding-left: 0;
+        text-align: center;
+    }
+    
+    .nav-link {
+        justify-content: center;
+    }
+    .sidebar .nav-link:hover,
+.sidebar .nav-link:hover i {
+    background-color: black !important;
+    color: white !important;
+}
+
 }
