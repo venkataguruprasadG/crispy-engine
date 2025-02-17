@@ -16,54 +16,37 @@
             left: 0;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
-            align-items: flex-start;
-            background-color: var(--secondary-color);
-            padding: 20px;
-            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+            justify-content: center;
+            align-items: center;
+            background-color: antiquewhite;
+            padding-top: 20px;
         }
-    
-    
-    .sidebar .nav-link:hover,
-    .sidebar .nav-link:hover i {
-        background-color: black !important;
-        color: white !important;
-    }
-
+        
         .sidebar .nav-link {
-            margin: 15px 0;
-            font-size: 18px;
-            color: var(--text-color);
+            margin: 10px 0;
+            font-weight: normal;
+            font-size: 20px;
             display: flex;
             align-items: center;
-            width: 100%;
+            color: #040505;
             padding: 8px 12px;
             border-radius: 4px;
             transition: all 0.3s ease;
         }
         
-        .sidebar .nav-link:hover {
-            background-color: rgba(91, 91, 243, 0.1);
-            color: var(--primary-color);
+        .sidebar .nav-link:hover,
+        .sidebar .nav-link:hover i {
+            background-color: black;
+            color: white;
         }
         
         .sidebar .navbar-brand {
-            margin: 20px 0;
-            font-size: 24px;
-            color: var(--primary-color);
-            text-decoration: none;
-            align-self: center;
-        }
-        
-        .main-content {
-            margin-left: 250px;
-            padding: 20px;
-        }
-        
-        hr {
-            width: 80%;
-            margin: 20px auto;
-            border-color: rgba(0,0,0,0.1);
+            padding-left: 70px;
+            margin-bottom: 20px;
+            align-self: flex-start;
+            font-weight: normal;
+            font-size: 20px;
+            color: rgb(91, 91, 243);
         }
     </style>
 </head>
@@ -110,17 +93,14 @@
                     <i class="fa fa-cog"></i>Settings
                 </a>
             </li>
+            <!-- Add Login Button -->
             <li class="nav-item">
                 <a class="nav-link" href="./login.html">
-                    <i class="fa fa-cog"></i>Login
+                    <i class="fa fa-sign-in-alt"></i>Login
                 </a>
             </li>
         </ul>
     </nav>
-
-    <div class="main-content">
-        <!-- Main content goes here -->
-    </div>
 
     <script src="bootstrap.bundle.min.js"></script>
 </body>
