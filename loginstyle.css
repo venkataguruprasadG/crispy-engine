@@ -10,7 +10,20 @@ body, html {
     text-align: center;
 }
 
-form {
-    display: inline-block;
-    text-align: left;
+.btn {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.fab{
+    margin-right: 8px;
+}
+
+.form-floating label {
+    font-size: 1.1rem; /* Adjust this value to increase the label size */
+}
+
+.btn-submit {
+    margin-top: 1.5rem; /* Adjust this value to increase spacing above the Submit button */
 }
