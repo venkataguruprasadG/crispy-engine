@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>PLACEMENT PORTAL</title>
     <style>
+        /* Sidebar styling */
         .sidebar {
             height: 100vh;
             width: 250px;
@@ -48,18 +49,33 @@
             font-size: 20px;
             color: rgb(3, 3, 14);
         }
-        .navbar-brand:hover{
+        
+        .navbar-brand:hover {
             color: rgb(10, 22, 129);
+        }
 
+        /* Cover image styling */
+        .cover-container {
+            margin-left: 250px; /* Leave space for sidebar */
+            width: calc(100% - 250px);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .cover-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     </style>
 </head>
 <body>
     <nav class="sidebar">
         <i class="fab fa-google"></i>
-        <a class="navbar-brand" href="./home.html">
-            StepAhead
-        </a>
+        <a class="navbar-brand" href="./home.html">StepAhead</a>
         <ul class="nav flex-column">
             <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">
@@ -67,8 +83,6 @@
                 </a>
             </li> 
             <hr />
-            
-            <!-- Add Login Button -->
             <li class="nav-item">
                 <a class="nav-link" href="./login.html">
                     <i class="fa fa-sign-in-alt"></i>Login
@@ -81,7 +95,12 @@
             </li>
         </ul>
     </nav>
-  
+
+    <!-- Cover Image -->
+    <div class="cover-container">
+        <img src="img.jpg" alt="Placement Portal Cover">
+    </div>
+
     <script src="bootstrap.bundle.min.js"></script>
 </body>
 </html>
