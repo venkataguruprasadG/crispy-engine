@@ -3,9 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>PLACEMENT PORTAL</title>
+    <style>
+        .sidebar {
+            height: 100vh;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.151);
+            padding-top: 20px;
+        }
+        
+        .sidebar .nav-link {
+            margin: 5px 0;
+            font-weight: normal;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            color: #040505;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .sidebar .nav-link:hover,
+        .sidebar .nav-link:hover i {
+            background-color: rgb(247, 247, 247);
+            color: rgb(10, 22, 129);
+        }
+        
+        .sidebar .navbar-brand {
+            padding-left: 70px;
+            margin-bottom: 20px;
+            align-self: flex-start;
+            font-weight: normal;
+            font-size: 20px;
+            color: rgb(3, 3, 14);
+        }
+        .navbar-brand:hover{
+            color: rgb(10, 22, 129);
+
+        }
+    </style>
 </head>
 <body>
-    <h1>Landing Page</h1>
+    <nav class="sidebar">
+        <i class="fab fa-google"></i>
+        <a class="navbar-brand" href="./home.html">
+            StepAhead
+        </a>
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">
+                    <i class="fa fa-home"></i>Home
+                </a>
+            </li> 
+            <hr />
+            
+            <!-- Add Login Button -->
+            <li class="nav-item">
+                <a class="nav-link" href="./login.html">
+                    <i class="fa fa-sign-in-alt"></i>Login
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./register.html">
+                    <i class="fa fa-sign-in-alt"></i>Register
+                </a>
+            </li>
+        </ul>
+    </nav>
+  
+    <script src="bootstrap.bundle.min.js"></script>
 </body>
 </html>
