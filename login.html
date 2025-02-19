@@ -93,22 +93,5 @@
         </form>
     </div>
 
-    <!-- Page Transition Animation -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            document.body.style.opacity = '1';
-        });
-
-        const links = document.querySelectorAll('a');
-        links.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                document.body.style.opacity = '0';
-                setTimeout(() => {
-                    window.location.href = link.href;
-                }, 300);
-            });
-        });
-    </script>
 </body>
 </html>
