@@ -5,25 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <!-- Corrected the link to Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>PLACEMENT PORTAL</title>
     <style>
-        .sidebar {
-            height: 100vh;
-            width: 250px;
-            position: fixed;
-            top: 0;
-            left: 0;
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+        .wrapper {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+        .sidebar {
+            width: 250px;
             background-color: rgba(0, 0, 0, 0.151);
             padding-top: 20px;
             border-radius: 40px;
             margin: 7px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
         }
-        
         .sidebar .nav-link {
             margin: 5px 0;
             font-weight: normal;
@@ -34,79 +41,179 @@
             padding: 8px 12px;
             border-radius: 4px;
             transition: all 0.3s ease;
+            width: 100%;
+            text-align: left;
         }
-        
         .sidebar .nav-link:hover,
         .sidebar .nav-link:hover i {
             background-color: rgb(247, 247, 247);
             color: rgb(10, 22, 129);
         }
-        
         .sidebar .navbar-brand {
-            padding-left: 70px;
-            margin-bottom: 20px;
-            align-self: flex-start;
-            font-weight: normal;
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            align-self: center;
+            font-weight: bold;
             font-size: 20px;
             color: rgb(3, 3, 14);
+            width: 100%;
+            text-align: center;
         }
-        .navbar-brand:hover{
+        .navbar-brand:hover {
             color: rgb(10, 22, 129);
-
+        }
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+            overflow: auto;
+        }
+        .card {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-left: 5px; /* Adjust based on the width of your sidebar */
+        }
+        .course-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .course-list li {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        .course-info {
+            margin-bottom: 10px;
+        }
+        .course-title {
+            font-weight: bold;
+        }
+        .progress {
+            color: #666;
+            font-size: 14px;
+        }
+        .progress-bar {
+            background-color: #e0e0e0;
+            width: 100%;
+            height: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-top: 5px;
+        }
+        .progress-bar span {
+            background-color: #4caf50;
+            height: 100%;
+            border-radius: 5px;
         }
     </style>
 </head>
 <body>
-    <nav class="sidebar">
-        <i class="fab fa-google"></i>
-        <a class="navbar-brand" href="./home.html">
-            StepAhead
-        </a>
-        <ul class="nav flex-column">
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">
-                    <i class="fa fa-home"></i>Home
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="./dashboard.html">
-                    <i class="fa fa-tachometer-alt"></i>Dashboard
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="./inbox.html">
-                    <i class="fa-solid fa-envelope"></i>Inbox
-                </a>
-            </li>
-            <hr />
-            <li class="nav-item">
-                <a class="nav-link" href="./MockInterview.html">
-                    <i class="fa fa-user-tie"></i>Mock Interview
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="./course.html">
-                    <i class="fa fa-graduation-cap"></i>Course
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="./Drives.html">
-                    <i class="fa fa-calendar-alt"></i>Drives
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="./settings.html">
-                    <i class="fa fa-cog"></i>Settings
-                </a>
-            </li>
-            <!-- Add Login Button -->
-            <li class="nav-item">
-                <a class="nav-link" href="./logout.html">
-                    <i class="fa fa-sign-in-alt"></i>Logout
-                </a>
-            </li>
-        </ul>
-    </nav>
+    <div class="wrapper">
+        <div class="sidebar">
+            <i class="fab fa-google"></i>
+            <a class="navbar-brand" href="./home.html">
+                StepAhead
+            </a>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">
+                        <i class="fa fa-home"></i>Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./dashboard.html">
+                        <i class="fa fa-tachometer-alt"></i>Dashboard
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./inbox.html">
+                        <i class="fa-solid fa-envelope"></i>Inbox
+                    </a>
+                </li>
+                <hr />
+                <li class="nav-item">
+                    <a class="nav-link" href="./MockInterview.html">
+                        <i class="fa fa-user-tie"></i>Mock Interview
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./course.html">
+                        <i class="fa fa-graduation-cap"></i>Course
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./Drives.html">
+                        <i class="fa fa-calendar-alt"></i>Drives
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./settings.html">
+                        <i class="fa fa-cog"></i>Settings
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./logout.html">
+                        <i class="fa fa-sign-in-alt"></i>Logout
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="card">
+                <h3>Active Courses</h3>
+                <ul class="course-list">
+                    <li>
+                        <div class="course-info">
+                            <div class="course-title">Java Full Stack</div>
+                            <div class="progress">24/22 Modules Completed</div>
+                        </div>
+                        <div class="progress-bar">
+                            <span style="width: 80%;"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="course-info">
+                            <div class="course-title">DSA Algorithm</div>
+                            <div class="progress">1/10 Modules Completed</div>
+                        </div>
+                        <div class="progress-bar">
+                            <span style="width: 10%;"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="course-info">
+                            <div class="course-title">Software Engineer - Level 1</div>
+                            <div class="progress">10/23 Modules Completed</div>
+                        </div>
+                        <div class="progress-bar">
+                            <span style="width: 43%;"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="course-info">
+                            <div class="course-title">Verbal Communication</div>
+                            <div class="progress">3/22 Modules Completed</div>
+                        </div>
+                        <div class="progress-bar">
+                            <span style="width: 13.6%;"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="course-info">
+                            <div class="course-title">Python Developer</div>
+                            <div class="progress">0/27 Modules Completed</div>
+                        </div>
+                        <div class="progress-bar">
+                            <span style="width: 0%;"></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <script src="bootstrap.bundle.min.js"></script>
 </body>
 </html>

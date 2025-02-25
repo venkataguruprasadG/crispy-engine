@@ -49,3 +49,73 @@
 }
 
 }
+
+.card {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 300px; /* Adjust the width as needed */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.course-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.course-list li {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.course-info {
+    margin-bottom: 10px;
+}
+
+.course-title {
+    font-weight: bold;
+}
+
+.progress {
+    color: #666;
+    font-size: 14px;
+}
+
+.progress-circle {
+    width: 50px;
+    height: 50px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-circle span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    color: #333;
+}
+
+.progress-circle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #4caf50;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+}
+
+.progress-circle[data-progress]::before {
+    transform: rotate( calc( ( var(--percentage) / 100 ) * 360 )deg );
+}
