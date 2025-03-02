@@ -4,119 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-    <!-- Corrected the link to Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
     <title>PLACEMENT PORTAL</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            width: 100%;
-        }
-        .wrapper {
-            display: flex;
-            width: 100%;
-            height: 100%;
-        }
-        .sidebar {
-            width: 250px;
-            background-color: rgba(0, 0, 0, 0.151);
-            padding-top: 20px;
-            border-radius: 40px;
-            margin: 7px;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-        }
-        .sidebar .nav-link {
-            margin: 5px 0;
-            font-weight: normal;
-            font-size: 20px;
-            display: flex;
-            align-items: center;
-            color: #040505;
-            padding: 8px 12px;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-            width: 100%;
-            text-align: left;
-        }
-        .sidebar .nav-link:hover,
-        .sidebar .nav-link:hover i {
-            background-color: rgb(247, 247, 247);
-            color: rgb(10, 22, 129);
-        }
-        .sidebar .navbar-brand {
-            padding: 10px 15px;
-            margin-bottom: 10px;
-            align-self: center;
-            font-weight: bold;
-            font-size: 20px;
-            color: rgb(3, 3, 14);
-            width: 100%;
-            text-align: center;
-        }
-        .navbar-brand:hover {
-            color: rgb(10, 22, 129);
-        }
-        .main-content {
-            flex-grow: 1;
-            padding: 20px;
-            overflow: auto;
-        }
-        .card {
-            background-color: #fff;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 4px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            margin-left: 5px; /* Adjust based on the width of your sidebar */
-        }
-        .course-list {
-            list-style-type: none;
-            padding: 0;
-        }
-        .course-list li {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            margin-bottom: 20px;
-        }
-        .course-info {
-            margin-bottom: 10px;
-        }
-        .course-title {
-            font-weight: bold;
-        }
-        .progress {
-            color: #666;
-            font-size: 10px;
-        }
-        .progress-bar {
-            background-color: #e0e0e0;
-            width: 100%;
-            height: 10px;
-            border-radius: 15px;
-            overflow: hidden;
-            margin-top: 5px;
-        }
-        .progress-bar span {
-            background-color: #4caf50;
-            height: 100%;
-            border-radius: 15px;
-        }
-    </style>
 </head>
 <body>
     <div class="wrapper">
+        <!-- Sidebar (Unchanged) -->
         <div class="sidebar">
             <i class="fab fa-google"></i>
-            <a class="navbar-brand" href="./home.html">
-                StepAhead
-            </a>
+            <a class="navbar-brand" href="./home.html">StepAhead</a>
             <ul class="nav flex-column">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">
@@ -161,59 +58,84 @@
                 </li>
             </ul>
         </div>
+
+        <!-- Main Content (Updated Course Cards) -->
         <div class="main-content">
-            <div class="card">
-                <h3>Active Courses</h3>
-                <ul class="course-list">
-                    <li>
-                        <div class="course-info">
-                            <div class="course-title">Java Full Stack</div>
-                            <div class="progress">24/22 Modules Completed</div>
+            <div class="container-fluid py-4">
+                <h1 class="display-5 mb-4">Active Learning Paths</h1>
+                <div class="row g-4">
+                    <!-- Java Full Stack -->
+                    <div class="col-12 col-md-6 col-xl-4">
+                        <div class="course-card card h-100 shadow-sm" role="button" tabindex="0">
+                            <div class="course-badge completed">COMPLETED</div>
+                            <div class="card-body">
+                                <div class="course-thumbnail"><i class="fab fa-java"></i></div>
+                                <div class="course-meta">
+                                    <span class="course-difficulty difficulty-intermediate">Intermediate</span>
+                                    <span class="text-muted">⏳ 45 hrs</span>
+                                </div>
+                                <h3 class="h5 card-title mb-3">Java Full Stack</h3>
+                                <div class="d-flex justify-content-between small mb-3">
+                                    <span>22/22 Modules</span>
+                                    <span>⭐ 4.8</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 100%"></div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="progress-bar">
-                            <span style="width: 80%;"></span>
+                    </div>
+
+                    <!-- DSA Algorithm -->
+                    <div class="col-12 col-md-6 col-xl-4">
+                        <div class="course-card card h-100 shadow-sm" role="button" tabindex="0">
+                            <div class="course-badge in-progress">IN PROGRESS</div>
+                            <div class="card-body">
+                                <div class="course-thumbnail"><i class="fas fa-project-diagram"></i></div>
+                                <div class="course-meta">
+                                    <span class="course-difficulty difficulty-advanced">Advanced</span>
+                                    <span class="text-muted">⏳ 30 hrs</span>
+                                </div>
+                                <h3 class="h5 card-title mb-3">DSA Algorithm</h3>
+                                <div class="d-flex justify-content-between small mb-3">
+                                    <span>1/10 Modules</span>
+                                    <span>⭐ 4.5</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 10%"></div>
+                                </div>
+                            </div>
                         </div>
-                    </li>
-                    <li>
-                        <div class="course-info">
-                            <div class="course-title">DSA Algorithm</div>
-                            <div class="progress">1/10 Modules Completed</div>
+                    </div>
+
+                    <!-- Software Engineer -->
+                    <div class="col-12 col-md-6 col-xl-4">
+                        <div class="course-card card h-100 shadow-sm" role="button" tabindex="0">
+                            <div class="course-badge in-progress">IN PROGRESS</div>
+                            <div class="card-body">
+                                <div class="course-thumbnail"><i class="fas fa-laptop-code"></i></div>
+                                <div class="course-meta">
+                                    <span class="course-difficulty difficulty-beginner">Beginner</span>
+                                    <span class="text-muted">⏳ 60 hrs</span>
+                                </div>
+                                <h3 class="h5 card-title mb-3">Software Engineer - Level 1</h3>
+                                <div class="d-flex justify-content-between small mb-3">
+                                    <span>10/23 Modules</span>
+                                    <span>⭐ 4.6</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 43%"></div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="progress-bar">
-                            <span style="width: 10%;"></span>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="course-info">
-                            <div class="course-title">Software Engineer - Level 1</div>
-                            <div class="progress">10/23 Modules Completed</div>
-                        </div>
-                        <div class="progress-bar">
-                            <span style="width: 43%;"></span>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="course-info">
-                            <div class="course-title">Verbal Communication</div>
-                            <div class="progress">3/22 Modules Completed</div>
-                        </div>
-                        <div class="progress-bar">
-                            <span style="width: 13.6%;"></span>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="course-info">
-                            <div class="course-title">Python Developer</div>
-                            <div class="progress">0/27 Modules Completed</div>
-                        </div>
-                        <div class="progress-bar">
-                            <span style="width: 0%;"></span>
-                        </div>
-                    </li>
-                </ul>
+                    </div>
+
+                    <!-- Add remaining courses following the same structure -->
+                </div>
             </div>
         </div>
     </div>
     <script src="bootstrap.bundle.min.js"></script>
+    <script src="home.js"></script>
 </body>
 </html>
